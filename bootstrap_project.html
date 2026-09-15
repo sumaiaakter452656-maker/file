@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hazrat Shahjalal International Airport | HSIA</title>
+	<meta name="description" content="The official website of Hazrat Shahjalal International Airport, Dhaka.">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<style>
+		:root {
+			--ink: #09283c;
+			--navy: #06354d;
+			--teal: #00a99d;
+			--orange: #f5a623;
+			--pale: #f3f8f8;
+			--line: #dce8e9;
+			--muted: #66808b;
+		}
+
+		body { color: var(--ink); font-family: "DM Sans", sans-serif; }
+		h1, h2, h3, h4, h5 { font-family: "Manrope", sans-serif; }
+		.topbar { background: var(--ink); color: #d9edef; font-size: .82rem; }
+		.topbar a, .navbar a { color: inherit; text-decoration: none; }
+		.topbar a:hover { color: #fff; }
+		.navbar { background: #fff; box-shadow: 0 2px 18px rgba(9, 40, 60, .08); }
+		.site-logo { width: 285px; height: auto; display: block; }
+		.brand-mark { width: 45px; height: 45px; border-radius: 50%; background: var(--teal); color: #fff; display: grid; place-items: center; font-size: 1.35rem; }
+		.brand-title { font-family: "Manrope", sans-serif; font-weight: 800; line-height: 1.05; color: var(--navy); }
+		.brand-title small { display: block; color: var(--muted); font: 500 .64rem "DM Sans", sans-serif; letter-spacing: .11em; text-transform: uppercase; margin-top: 4px; }
+		.nav-link { color: var(--ink) !important; font-weight: 600; font-size: .9rem; }
+		.nav-link:hover { color: var(--teal) !important; }
+		.btn-orange { background: var(--orange); border-color: var(--orange); color: var(--ink); font-weight: 700; }
+		.btn-orange:hover { background: #e79715; border-color: #e79715; color: var(--ink); }
+		.hero { min-height: 555px; background: linear-gradient(90deg, rgba(4, 36, 53, .88) 0%, rgba(4, 36, 53, .53) 46%, rgba(4, 36, 53, .08) 100%), url("https://www.hsia.gov.bd/public/uploads/website/slider/slider_image673af3ba87049.jpg") center/cover; display: flex; align-items: center; color: #fff; }
+		.hero-copy { max-width: 650px; padding: 72px 0; }
+		.eyebrow { color: var(--orange); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; font-size: .76rem; }
+		.hero h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); line-height: 1.03; letter-spacing: -.04em; }
+		.hero p { color: #e5f0f1; font-size: 1.1rem; max-width: 535px; }
+		.quick-actions { margin-top: -45px; position: relative; z-index: 2; }
+		.action-card { background: #fff; border: 1px solid var(--line); height: 100%; padding: 25px 20px; transition: transform .2s, box-shadow .2s; }
+		.action-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(9, 40, 60, .12); }
+		.action-icon { width: 48px; height: 48px; display: grid; place-items: center; background: #e7f7f5; color: var(--teal); border-radius: 12px; font-size: 1.35rem; }
+		.action-card h3 { font-size: 1.04rem; margin: 17px 0 6px; }
+		.action-card p { color: var(--muted); font-size: .85rem; margin: 0; }
+		.section-space { padding: 100px 0; }
+		.section-kicker { color: var(--teal); font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+		.section-title { font-size: clamp(2rem, 3.4vw, 3rem); letter-spacing: -.035em; }
+		.welcome-image { min-height: 420px; background: url("https://www.hsia.gov.bd/public/uploads/website/gallery/gallery_thumbnail_643b958893c7a.jpg") center/cover; }
+		.welcome-copy { padding: 25px 0 25px 45px; }
+		.welcome-copy p, .muted-copy { color: var(--muted); line-height: 1.85; }
+		.stat-band { background: var(--navy); color: #fff; padding: 55px 0; }
+		.stat { border-right: 1px solid rgba(255,255,255,.22); }
+		.stat:last-child { border: 0; }
+		.stat strong { color: var(--orange); font: 800 clamp(2rem, 4vw, 3.2rem) "Manrope", sans-serif; display: block; }
+		.stat span { color: #c5dfe0; font-size: .84rem; }
+		.service-section { background: var(--pale); }
+		.service-card { background: #fff; border: 1px solid var(--line); padding: 28px; height: 100%; }
+		.service-card i { font-size: 1.7rem; color: var(--teal); }
+		.service-card h3 { font-size: 1.08rem; margin-top: 20px; }
+		.service-card p { color: var(--muted); font-size: .88rem; line-height: 1.7; }
+		.text-link { color: var(--teal); font-weight: 700; text-decoration: none; font-size: .85rem; }
+		.gallery-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; grid-template-rows: 180px 180px; gap: 14px; }
+		.gallery-grid a { display: block; overflow: hidden; }
+		.gallery-grid a:first-child { grid-row: 1 / 3; }
+		.gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s; }
+		.gallery-grid a:hover img { transform: scale(1.05); }
+		footer { background: #041f30; color: #c3d6d9; }
+		footer h5 { color: #fff; font-size: .95rem; margin-bottom: 20px; }
+		footer a { color: #c3d6d9; text-decoration: none; font-size: .86rem; display: block; margin-bottom: 11px; }
+		footer a:hover { color: var(--orange); }
+		.footer-brand { color: #fff; font: 800 1.2rem "Manrope", sans-serif; }
+		.footer-logo { width: 245px; height: auto; display: block; }
+		.footer-bottom { border-top: 1px solid rgba(255,255,255,.12); color: #8eaab0; font-size: .78rem; }
+		.flight-page-embed { width: 100%; min-height: 1700px; border: 0; display: block; background: #fff; }
+		@media (max-width: 991px) { .welcome-copy { padding: 35px 0 0; } .stat { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); padding: 18px 0; } .stat:last-child { border: 0; } }
+		@media (max-width: 575px) { .site-logo { width: 235px; } .flight-page-embed { min-height: 2400px; } .hero { min-height: 610px; } .quick-actions { margin-top: 20px; } .section-space { padding: 70px 0; } .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 130px 130px; } .gallery-grid a:first-child { grid-row: 1 / 2; grid-column: 1 / 3; } }
+	</style>
+</head>
+<body>
+	<div class="topbar py-2">
+		<div class="container d-flex justify-content-between align-items-center gap-3">
+			<span><i class="bi bi-telephone me-2"></i>Hotline: <a href="tel:13600">13600</a> / <a href="tel:09614013600">09614-013600</a></span>
+			<div class="d-flex gap-3"><a href="#contact">Contact</a><a href="#">বাংলা</a></div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-expand-lg sticky-top py-3" aria-label="Main navigation">
+		<div class="container">
+			<a class="navbar-brand d-flex align-items-center gap-3" href="#top">
+				<img class="site-logo" src="logo_en_with_name.png" alt="Hazrat Shahjalal International Airport">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="mainNav">
+				<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="flight_info.html">Flight Info</a></li>
+					<li class="nav-item"><a class="nav-link" href="passanger_guide.html">Passenger Guide</a></li>
+					<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+					<li class="nav-item"><a class="nav-link" href="Prohibited_Items_Category.html">Prohibited Items Category</a></li>
+					<li class="nav-item ms-lg-2"><a class="btn btn-orange btn-sm px-3 py-2" href="#contact">Contact Us <i class="bi bi-arrow-up-right ms-1"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main id="top">
+		<section class="hero">
+			<div class="container"><div class="hero-copy">
+				<div class="eyebrow mb-3">Your gateway to Bangladesh</div>
+				<h1>Every journey begins here.</h1>
+				<p class="mt-4 mb-4">Welcome to Hazrat Shahjalal International Airport. We put our respected passengers first, every step of the way.</p>
+				<a class="btn btn-orange px-4 py-3" href="#welcome">Explore the airport <i class="bi bi-arrow-right ms-2"></i></a>
+			</div></div>
+		</section>
+
+		<section class="quick-actions" id="flight-info">
+			<div class="container"><div class="row g-3">
+				<div class="col-sm-6 col-lg-3"><a href="flight_info.html" class="action-card d-block text-decoration-none"><div class="action-icon"><i class="bi bi-airplane"></i></div><h3>Flight Information</h3><p>Check arrivals, departures and schedules.</p></a></div>
+				<div class="col-sm-6 col-lg-3"><a href="passanger_guide.html" class="action-card d-block text-decoration-none"><div class="action-icon"><i class="bi bi-person-walking"></i></div><h3>Passenger Guide</h3><p>Everything you need before you fly.</p></a></div>
+				<div class="col-sm-6 col-lg-3"><a href="service.html" class="action-card d-block text-decoration-none"><div class="action-icon"><i class="bi bi-grid-1x2"></i></div><h3>Airport Services</h3><p>Make your time at HSIA comfortable.</p></a></div>
+				<div class="col-sm-6 col-lg-3"><a href="Prohibited_Items_Category.html" class="action-card d-block text-decoration-none"><div class="action-icon"><i class="bi bi-shield-check"></i></div><h3>Prohibited Items</h3><p>Know what you can carry on board.</p></a></div>
+			</div></div>
+		</section>
+
+		<section class="section-space" id="welcome">
+			<div class="container"><div class="row align-items-center g-5">
+				<div class="col-lg-6"><div class="welcome-image"></div></div>
+				<div class="col-lg-6"><div class="welcome-copy"><div class="section-kicker mb-3">Welcome to HSIA</div><h2 class="section-title mb-4">A warm welcome to the heart of Bangladesh.</h2><p>Located in Kurmitola, just 17 kilometers from Dhaka's vibrant center, Hazrat Shahjalal International Airport has evolved with Bangladesh since 1980.</p><p>With an annual passenger handling capacity of 12.5 million, our dedicated professional team is available 24/7 to make your journey smooth, safe and memorable.</p><a href="#" class="text-link">Learn more about HSIA <i class="bi bi-arrow-right ms-2"></i></a></div></div>
+			</div></div>
+		</section>
+
+		<section class="stat-band"><div class="container"><div class="row text-center g-0"><div class="col-6 col-lg-3 stat"><strong>12.5M+</strong><span>Passengers per year</span></div><div class="col-6 col-lg-3 stat"><strong>100K+</strong><span>Flights per year</span></div><div class="col-6 col-lg-3 stat"><strong>40+</strong><span>Airlines</span></div><div class="col-6 col-lg-3 stat"><strong>60+</strong><span>Destinations</span></div></div></div></section>
+
+		<section class="section-space service-section" id="services"><div class="container"><div class="row align-items-end mb-5"><div class="col-lg-7"><div class="section-kicker mb-3">At your service</div><h2 class="section-title mb-0">Make your airport experience effortless.</h2></div><div class="col-lg-4 ms-auto mt-3 mt-lg-0"><p class="muted-copy mb-0">From check-in to boarding, discover the facilities and support available to every passenger.</p></div></div><div class="row g-3" id="passenger-guide"><div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-wifi"></i><h3>Free Wi-Fi</h3><p>Stay connected throughout the terminal with complimentary internet access.</p><a href="#" class="text-link">Find out more <i class="bi bi-arrow-right ms-1"></i></a></div></div><div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-cup-hot"></i><h3>Dining & Shopping</h3><p>Enjoy local flavours, international favourites and duty-free shopping.</p><a href="#" class="text-link">Explore facilities <i class="bi bi-arrow-right ms-1"></i></a></div></div><div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-car-front"></i><h3>Transport & Parking</h3><p>Find convenient options for getting to and from the airport.</p><a href="#" class="text-link">Plan your trip <i class="bi bi-arrow-right ms-1"></i></a></div></div><div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-universal-access"></i><h3>Special Assistance</h3><p>Our team is ready to support passengers with accessibility needs.</p><a href="#" class="text-link">Get assistance <i class="bi bi-arrow-right ms-1"></i></a></div></div></div></div></section>
+
+		<section class="section-space" id="discovery"><div class="container"><div class="row align-items-end mb-5"><div class="col"><div class="section-kicker mb-3">Discovery</div><h2 class="section-title mb-0">See you at the airport.</h2></div><div class="col-auto"><a href="#" class="text-link">View gallery <i class="bi bi-arrow-right ms-1"></i></a></div></div><div class="gallery-grid"><a href="#"><img src="https://www.hsia.gov.bd/public/uploads/website/gallery/gallery_thumbnail_643b958893c7a.jpg" alt="HSIA airport interior"></a><a href="#"><img src="https://www.hsia.gov.bd/public/uploads/website/gallery/gallery_thumbnail_643b951bdddc3.jpg" alt="Airport terminal"></a><a href="#"><img src="https://www.hsia.gov.bd/public/uploads/website/gallery/gallery_thumbnail_643b94fb01b9c.jpg" alt="Airport facilities"></a><a href="#"><img src="https://www.hsia.gov.bd/public/uploads/website/gallery/gallery_thumbnail_643b94e3022c4.jpg" alt="Airport view"></a><a href="#"><img src="https://www.hsia.gov.bd/public/uploads/website/gallery/gallery_thumbnail_643b941e73893.jpg" alt="Airport concourse"></a></div></div></section>
+	</main>
+
+	<footer id="contact"><div class="container pt-5 pb-4"><div class="row g-5"><div class="col-lg-5"><div class="footer-brand mb-3"><img class="footer-logo" src="logo_en_with_name.png" alt="Hazrat Shahjalal International Airport"></div><p class="mb-4" style="max-width: 330px; line-height: 1.8;">Hazrat Shahjalal International Airport, your trusted gateway to Dhaka and beautiful Bangladesh.</p><div class="d-flex gap-2"><a class="d-inline-flex align-items-center justify-content-center border rounded-circle" style="width:35px;height:35px" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a class="d-inline-flex align-items-center justify-content-center border rounded-circle" style="width:35px;height:35px" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div><div class="col-6 col-lg-3"><h5>Contact Us</h5><a href="tel:13600"><i class="bi bi-telephone me-2"></i>13600 / 09614-013600</a><a href="mailto:info@hsia.gov.bd"><i class="bi bi-envelope me-2"></i>info@hsia.gov.bd</a><a href="#"><i class="bi bi-geo-alt me-2"></i>Kurmitola, Dhaka-1229</a></div><div class="col-6 col-lg-2"><h5>Information</h5><a href="#">About HSIA</a><a href="#">FAQ</a><a href="#">Form & Downloads</a><a href="#">News & Events</a></div><div class="col-6 col-lg-2"><h5>Policies</h5><a href="#">Terms & Conditions</a><a href="#">Legal Notice</a><a href="#">Privacy Policy</a><h5 class="mt-4">Get the app</h5><a href="#"><i class="bi bi-google-play me-2"></i>Android App</a></div></div><div class="footer-bottom mt-5 pt-4 d-flex flex-column flex-md-row justify-content-between gap-2"><span>Copyright © 2026 Hazrat Shahjalal International Airport</span><span>Powered by CAAB</span></div></div></footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

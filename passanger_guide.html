@@ -1,0 +1,62 @@
+	<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Passenger Guide Category | Hazrat Shahjalal International Airport</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<style>
+			:root { --blue: #004a82; --navy: #17246e; --purple: #641775; --ink: #1d2731; }
+			* { box-sizing: border-box; }
+			body { margin: 0; color: var(--ink); font-family: "Open Sans", sans-serif; background: #fff; }
+			a { text-decoration: none; }
+			.site-header { min-height: 78px; background: linear-gradient(90deg, rgba(18, 29, 119, .96), rgba(39, 47, 151, .82)), url("slider_image673af3b1cce7f.jpg") center/cover; }
+			.header-inner { min-height: 78px; }
+			.menu-button { width: 42px; height: 42px; border: 0; background: transparent; color: #fff; font-size: 2rem; line-height: 1; padding: 0; }
+			.site-logo { width: 205px; height: auto; display: block; }
+			.header-links a { color: #fff; font-size: .88rem; font-weight: 600; margin-left: 15px; }
+			.header-links a:hover { color: #f6cf25; }
+			.page-heading { min-height: 90px; padding: 10px 0 16px; background: linear-gradient(rgba(241, 247, 249, .88), rgba(255,255,255,.82)), url("slider_image673af3b1cce7f.jpg") center 38%/cover; }
+			.page-heading h1 { color: var(--blue); font-size: clamp(1.8rem, 3vw, 2.35rem); font-weight: 800; margin: 4px 0 0; text-align: center; }
+			.breadcrumb { justify-content: flex-end; margin: 0; font-size: .82rem; }
+			.breadcrumb a { color: #36a6d2; }
+			.breadcrumb .active { color: #10255d; }
+			.guide-area { min-height: 405px; padding: 18px 0 78px; background-color: #fff; background-image: linear-gradient(30deg, rgba(112, 137, 210, .18) 12%, transparent 12.5%, transparent 87%, rgba(112, 137, 210, .18) 87.5%, rgba(112, 137, 210, .18)), linear-gradient(150deg, rgba(112, 137, 210, .13) 12%, transparent 12.5%, transparent 87%, rgba(112, 137, 210, .13) 87.5%, rgba(112, 137, 210, .13)); background-size: 180px 180px; background-position: 70% 170px, 73% 170px; }
+			.guide-area > .container { max-width: 1170px; }
+			.guide-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 27px; }
+			.body-bottom { height: 44px; background-color: #17177a; background-image: radial-gradient(circle at 25% 50%, rgba(62, 113, 211, .55) 0 2px, transparent 3px), linear-gradient(125deg, transparent 0 30%, rgba(69, 58, 180, .4) 30% 31%, transparent 31% 65%, rgba(17, 113, 183, .35) 65% 66%, transparent 66%); background-size: 13px 13px, 100% 100%; }
+			.guide-card { display: flex; flex-direction: column; min-height: 306px; overflow: hidden; border: 1px solid #c2cfdf; border-radius: 10px; background: #fff; color: var(--ink); box-shadow: 0 5px 8px rgba(35, 56, 121, .22); border-bottom: 15px solid #41439b; transition: transform .2s, box-shadow .2s; }
+			.guide-card:hover { transform: translateY(-3px); box-shadow: 0 12px 22px rgba(35, 56, 121, .27); }
+			.guide-card img { width: 100%; height: 205px; object-fit: cover; display: block; }
+			.guide-copy { padding: 10px 13px 15px; }
+			.guide-copy h2 { margin: 0 0 12px; font-size: 1.08rem; font-weight: 800; }
+			.guide-copy p { margin: 0; font-size: .91rem; line-height: 1.65; }
+			.guide-copy i { color: #111; font-size: .78rem; }
+			.contact-strip { background: linear-gradient(90deg, #5e1374, #81198a); color: #fff; }
+			.contact-item { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 20px; font-weight: 800; }
+			.contact-item i { font-size: 1.35rem; }
+			.footer { background: #202b75; color: #dbe7ff; padding: 48px 0 26px; }
+			.footer h3 { color: #fff; font-size: 1.05rem; font-weight: 800; margin-bottom: 19px; }
+			.footer li, .footer a { color: #dbe7ff; font-size: .87rem; line-height: 1.8; }
+			.footer ul { padding: 0; margin: 0; list-style: none; }
+			.footer a:hover { color: #f6cf25; }
+			.app-links { display: flex; gap: 10px; flex-wrap: wrap; }
+			.app-badge { border: 1px solid rgba(255,255,255,.55); border-radius: 4px; padding: 7px 12px; color: #fff !important; font-size: .75rem !important; }
+			.footer-bottom { border-top: 1px solid rgba(255,255,255,.2); margin-top: 33px; padding-top: 18px; font-size: .77rem; color: #b9c9ec; }
+			@media (max-width: 767px) { .site-header, .header-inner { min-height: 60px; } .site-logo { width: 165px; } .header-links a { font-size: .7rem; margin-left: 6px; } .menu-button { width: 34px; font-size: 1.7rem; } .page-heading { min-height: 130px; } .breadcrumb { justify-content: center; } .guide-grid { grid-template-columns: 1fr; } .guide-area { padding-bottom: 45px; } }
+			@media (max-width: 575px) { .guide-copy { padding: 18px 20px 22px; } }
+			@media (max-width: 420px) { .header-links a:first-child { display: none; } .site-logo { width: 150px; } .contact-item { gap: 12px; font-size: .88rem; } }
+		</style>
+	</head>
+	<body>
+		<header class="site-header"><div class="container-fluid px-3 px-md-4 header-inner d-flex align-items-center"><button class="menu-button" type="button" aria-label="Open navigation"><i class="bi bi-list"></i></button><a href="copy.html" class="ms-2"><img class="site-logo" src="logo_en_with_name.png" alt="Hazrat Shahjalal International Airport"></a><nav class="header-links ms-auto" aria-label="Utility navigation"><a href="#footer">Form &amp; Downloads</a><a href="#footer">Contact</a><a href="#">BN</a></nav></div></header>
+		<section class="page-heading"><div class="container"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="copy.html"><i class="bi bi-house-fill"></i> Home</a></li><li class="breadcrumb-item active" aria-current="page">Passenger Guide Category</li></ol></nav><h1>Passenger Guide Category</h1></div></section>
+		<main class="guide-area"><div class="container"><div class="guide-grid"><a class="guide-card"><img src="64ad43e4c4f2f_170.png" alt="Departure Guideline"><div class="guide-copy"><h2>Departure Guideline</h2><p>Activities of Respected Passengers for Deparature <i class="bi bi-arrow-right-circle-fill"></i></p></div></a><a class="guide-card"><img src="64ad43f529d9f_170.png" alt="Arrival Guideline"><div class="guide-copy"><h2>Arrival Guideline</h2><p>Activities of Respected Passengers for Arrival <i class="bi bi-arrow-right-circle-fill"></i></p></div></a><a class="guide-card"><img src="66b1ea023b0f9_170.jpg" alt="General Guideline"><div class="guide-copy"><h2>General Guideline</h2><p>General Activities for all sorts of passengers <i class="bi bi-arrow-right-circle-fill"></i></p></div></a></div></div></main>
+		<section class="contact-strip"><div class="container-fluid"><div class="row"><div class="col-md-6 contact-item"><i class="bi bi-headset"></i><a class="text-white" href="tel:13600">13600</a></div><div class="col-md-6 contact-item"><i class="bi bi-headset"></i><a class="text-white" href="tel:09614013600">09614-013600</a></div></div></div></section>
+		<footer class="footer" id="footer"><div class="container"><div class="row g-4"><div class="col-lg-5"><h3>Contact Us</h3><ul><li><i class="bi bi-telephone me-2"></i>Hotline: <a href="tel:13600">13600</a> / <a href="tel:09614013600">09614-013600</a></li><li><i class="bi bi-envelope me-2"></i>Email: <a href="mailto:info@hsia.gov.bd">info@hsia.gov.bd</a></li><li><i class="bi bi-geo-alt me-2"></i>Location: Hazrat Shahjalal International Airport, Kurmitola, Dhaka-1229</li></ul></div><div class="col-6 col-lg-3"><h3>Our Policies</h3><ul><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Legal Notice</a></li><li><a href="#">Privacy &amp; Policy</a></li><li><a href="#">FAQ</a></li></ul></div><div class="col-6 col-lg-4"><h3>Get the App</h3><div class="app-links"><a class="app-badge" href="#"><i class="bi bi-google-play me-2"></i>Android Apps</a><a class="app-badge" href="#"><i class="bi bi-apple me-2"></i>Apple Apps</a></div></div></div><div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2"><span>Copyright &copy; 2026 Hazrat Shahjalal International Airport</span><span>Powered By Swapnoloke</span></div></div></footer>
+	</body>
+	</html>
